@@ -1,0 +1,58 @@
+<!docutype html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mark</title>
+	
+</head>
+<body>
+    <input type="text" placeholder="enter tamil mark" id="mark1">
+    <input type="text" placeholder="enter english mark" id="mark2">
+    <input type="text" placeholder="enter maths mark" id="mark3">
+    <input type="text" placeholder="enter science mark" id="mark4">
+    <input type="text" placeholder="enter social mark" id="mark5">
+	<button id="tot">total</button>
+	
+	<h1 id="total"></h1>
+	<h2 id="per"></h2>
+	<p id="para"></p>
+    <script>
+	    let btn=document.createElement("tot");
+		tot.addEventListener("click",myfun);
+		let button=document.createElement("percen");
+		percen.addEventListener("click",getper);
+		function myfun(){
+		    let num1=document.getElementById("mark1").value;
+		    let num2=document.getElementById("mark2").value;
+		    let num3=document.getElementById("mark3").value;
+		    let num4=document.getElementById("mark4").value;
+		    let num5=document.getElementById("mark5").value;
+		    let sum=parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5);
+			let totalnum=document.getElementById("total").innerHTML=sum;
+		    let percentage=(totalnum/500)*100;
+		    let percen=document.getElementById("per").innerHTML=percentage;
+			
+			if(percentage>=90){
+		    document.getElementById("para").innerHTML="grade is A++";
+		   }
+		    else if(percentage>=80&&percentage<90){
+		        document.getElementById("para").innerHTML="grade is A";
+				}
+		    else if(percentage>=70&&percentage<80){
+                    document.getElementById("para").innerHTML="grade is B";	
+                }
+            else if(percentage>=60&&percentage<70){
+                  document.getElementById("para").innerHTML="grade is C";
+                }
+			else if(percentage>=50&&percentage<60){
+			    document.getElementById("para").innerHTML="grade is D";
+				}
+			else{
+			    document.getElementById("para").innerHTML="grade is E";
+				}
+			}
+		    
+	</script>
+</body>
+</html>
